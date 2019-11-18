@@ -73,7 +73,7 @@
   }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 768px) {
   .billContainer {
     min-height: 500px;
     width: 100%;
@@ -136,16 +136,16 @@
       z-index: 97;
     }
     to {
-      background-color: $site-blue;
-      transform: scale(1.005);
-      box-shadow: 3px 3px 10px $site-blue-shadow;
-      z-index: 98;
+      background-color: $site-darkblue;
+      transform: scale(1);
+      box-shadow: none;
+      //z-index: 98;
     }
   }
   @keyframes billOutAnim {
     from {
-      background-color: $site-blue;
-      transform: scale(1.005);
+      background-color: $site-darkblue;
+      transform: scale(1);
       z-index: 98;
     }
     to {

@@ -18,7 +18,7 @@
   }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 768px) {
   .footer {
     z-index: 99;
     height: 100px;
@@ -35,7 +35,10 @@
     font-size: 18px;
 
     .footerStuff {
+      min-width: 100px;
+      //background-color: darkgreen;
       color: $site-darkblue;
+      font-size: 12px;
     }
   }
 }

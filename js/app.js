@@ -79,13 +79,13 @@ var app = new Vue({
 
     budget: function() {
       //start budget tracker equal to money in the bank
-      let budgetTracker = this.bankMoney;
+      let budgetTracker = Number(this.bankMoney);
       //get the incomes
       for (let i = 0; i < this.incomes.length; i++) {
-        budgetTracker += this.incomes[i].amount;
+        budgetTracker += Number(this.incomes[i].amount);
       }
       //subtract the bills that are checked
-      budgetTracker -= this.billCounter;
+      budgetTracker -= Number(this.billCounter);
       return budgetTracker;
     },
 

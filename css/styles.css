@@ -36,7 +36,7 @@ h2 {
   padding: 10px 20px;
   min-height: 40px;
   width: 100%;
-  background-color: #57a26b;
+  background-color: rgba(77, 152, 97, 0.95);
   font-family: "Raleway", sans-serif;
   -webkit-box-shadow: 3px 3px 10px #161f2e;
   box-shadow: 3px 3px 10px #161f2e;
@@ -79,7 +79,7 @@ h2 {
     border-radius: 12px;
     border: none; }
 
-@media (max-width: 730px) {
+@media (max-width: 768px) {
   .incomeContainer {
     min-height: 200px;
     width: 100%;
@@ -220,7 +220,7 @@ h2 {
     transform: scale(1);
     z-index: 97; } }
 
-@media (max-width: 730px) {
+@media (max-width: 768px) {
   .billContainer {
     min-height: 500px;
     width: 100%;
@@ -283,12 +283,11 @@ h2 {
       transform: scale(1);
       z-index: 97; }
     to {
-      background-color: #2d415f;
-      -webkit-transform: scale(1.005);
-      transform: scale(1.005);
-      -webkit-box-shadow: 3px 3px 10px #161f2e;
-      box-shadow: 3px 3px 10px #161f2e;
-      z-index: 98; } }
+      background-color: #212f45;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-box-shadow: none;
+      box-shadow: none; } }
   @keyframes billOverAnim {
     from {
       background-color: #212f45;
@@ -296,17 +295,16 @@ h2 {
       transform: scale(1);
       z-index: 97; }
     to {
-      background-color: #2d415f;
-      -webkit-transform: scale(1.005);
-      transform: scale(1.005);
-      -webkit-box-shadow: 3px 3px 10px #161f2e;
-      box-shadow: 3px 3px 10px #161f2e;
-      z-index: 98; } }
+      background-color: #212f45;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-box-shadow: none;
+      box-shadow: none; } }
   @-webkit-keyframes billOutAnim {
     from {
-      background-color: #2d415f;
-      -webkit-transform: scale(1.005);
-      transform: scale(1.005);
+      background-color: #212f45;
+      -webkit-transform: scale(1);
+      transform: scale(1);
       z-index: 98; }
     to {
       background-color: #212f45;
@@ -315,9 +313,9 @@ h2 {
       z-index: 97; } }
   @keyframes billOutAnim {
     from {
-      background-color: #2d415f;
-      -webkit-transform: scale(1.005);
-      transform: scale(1.005);
+      background-color: #212f45;
+      -webkit-transform: scale(1);
+      transform: scale(1);
       z-index: 98; }
     to {
       background-color: #212f45;
@@ -332,7 +330,7 @@ h2 {
   padding: 10px;
   text-align: center;
   letter-spacing: 1px;
-  background-color: rgba(87, 162, 107, 0.95);
+  background-color: rgba(77, 152, 97, 0.95);
   position: fixed;
   bottom: 0;
   display: -webkit-box;
@@ -347,7 +345,7 @@ h2 {
   .footer .footerStuff {
     color: #212f45; }
 
-@media (max-width: 730px) {
+@media (max-width: 768px) {
   .footer {
     z-index: 99;
     height: 100px;
@@ -355,7 +353,7 @@ h2 {
     padding: 10px;
     text-align: center;
     letter-spacing: 1px;
-    background-color: rgba(87, 162, 107, 0.95);
+    background-color: rgba(77, 152, 97, 0.95);
     position: fixed;
     bottom: 0;
     display: -webkit-box;
@@ -368,4 +366,6 @@ h2 {
     align-items: center;
     font-size: 18px; }
     .footer .footerStuff {
-      color: #212f45; } }
+      min-width: 100px;
+      color: #212f45;
+      font-size: 12px; } }
