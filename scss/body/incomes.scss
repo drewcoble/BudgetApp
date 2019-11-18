@@ -1,0 +1,34 @@
+.incomeContainer {
+  min-height: 200px;
+  width: 50%;
+  //background-color: darkolivegreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px 0px 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+
+  .incomeLine {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px;
+    //margin-bottom: 10px;
+
+    .incomeLabel {
+      width: 50%;
+    }
+  }
+
+  input {
+    height: 30px;
+    text-align: left;
+    padding: 2px 0px 2px 15px;
+    font-size: 16px;
+    width: 50%;
+    border-radius: 12px;
+    border: none;
+  }
+}

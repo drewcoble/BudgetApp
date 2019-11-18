@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $font-manjari;
+  letter-spacing: 2px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: $site-white;
+  background-color: $site-darkblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+#app {
+  margin-bottom: 105px;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+  padding: 10px 20px;
+  min-height: 40px;
+  width: 100%;
+  //text-align: left;
+  background-color: $site-darkgreen;
+  font-family: $font-raleway;
+  border-radius: 12px;
+}

@@ -1,0 +1,74 @@
+.billContainer {
+  min-height: 500px;
+  width: 50%;
+  //background-color: darkolivegreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px 0px 10px;
+
+  .billOver {
+    animation: billOverAnim 0.4s;
+    animation-fill-mode: both;
+  }
+  .billOut {
+    animation: billOutAnim 0.4s;
+    animation-fill-mode: both;
+  }
+
+  .bills {
+    height: 50px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 12px;
+
+    .billDate {
+      font-size: 85%;
+      letter-spacing: 0;
+      //width: 40px;
+      font-weight: bold;
+      font-family: "Arial Narrow Bold", sans-serif;
+      color: $site-darkblue;
+      padding: 3px 4px 3px;
+      border-radius: 40px;
+      background-color: $site-white;
+      box-shadow: 3px 3px 10px #161f2e;
+    }
+
+    .checkedBillDate {
+      background-color: $site-green;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes billOverAnim {
+  from {
+    background-color: $site-darkblue;
+    transform: scale(1);
+    z-index: 97;
+  }
+  to {
+    background-color: $site-blue;
+    transform: scale(1.005);
+    box-shadow: 3px 3px 10px #161f2e;
+    z-index: 98;
+  }
+}
+@keyframes billOutAnim {
+  from {
+    background-color: $site-blue;
+    transform: scale(1.005);
+    z-index: 98;
+  }
+  to {
+    background-color: $site-darkblue;
+    transform: scale(1);
+    z-index: 97;
+  }
+}

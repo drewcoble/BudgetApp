@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Budget Sheet</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="icon" href="images/dollar.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Manjari|Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div class="incomeContainer">
+        <h2>How much money are we working with?</h2>
+        <div class="incomeLine">
+          <div class="incomeLabel">Money in the Bank</div>
+          <input
+            v-bind:placeholder="bankMoney"
+            v-model="bankMoney"
+            type="number"
+          />
+        </div>
+        <div class="incomeLine" v-for="(income, index) in incomes">
+          <div class="incomeLabel">{{income.label}}</div>
+          <input
+            v-bind:placeholder="income.amount"
+            v-on:change="setIncome(event, index)"
+            type="number"
+          />
+        </div>
+      </div>
+      <div class="billContainer">
+        <h2>Select the bills due this pay period</h2>
+        <div
+          class="bills"
+          v-for="(bill, index) in bills"
+          v-bind:key="bill.label"
+          v-on:click="[toggleChecked(index), countBills()]"
+          v-on:mouseOver="onBillOver(event)"
+          v-on:mouseOut="onBillOut(event)"
+        >
+          <span class="billDate" v-bind:class="{checkedBillDate : bill.check}"
+            >{{bill.dueDate}}</span
+          >
+          &nbsp;&nbsp;{{bill.label}} - ${{bill.amountDue}}
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="billInfo">Bills: ${{billCounter}}</div>
+        <div class="billInfo">Tithe: ${{tithe}}</div>
+        <div class="billInfo">Margin: ${{budget()}}</div>
+        <!-- <div class="budgetButtonHolder">
+          <button class="btnBudget" v-on:click="budget()">Budget!</button>
+        </div> -->
+        <div class="footerStuff">
+          Budget App <span style="font-size: 150%">&copy;</span><br />Drew Coble
+          - 2019
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
