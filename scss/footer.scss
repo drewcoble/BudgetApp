@@ -17,3 +17,25 @@
     color: $site-darkblue;
   }
 }
+
+@media (max-width: 730px) {
+  .footer {
+    z-index: 99;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: rgba($site-darkgreen, 0.95);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+
+    .footerStuff {
+      color: $site-darkblue;
+    }
+  }
+}

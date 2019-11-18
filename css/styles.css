@@ -303,3 +303,26 @@ h2 {
   font-size: 20px; }
   .footer .footerStuff {
     color: #212f45; }
+
+@media (max-width: 730px) {
+  .footer {
+    z-index: 99;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: rgba(87, 162, 107, 0.95);
+    position: fixed;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 18px; }
+    .footer .footerStuff {
+      color: #212f45; } }
