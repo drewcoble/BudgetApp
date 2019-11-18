@@ -38,6 +38,8 @@ h2 {
   width: 100%;
   background-color: #57a26b;
   font-family: "Raleway", sans-serif;
+  -webkit-box-shadow: 3px 3px 10px #161f2e;
+  box-shadow: 3px 3px 10px #161f2e;
   border-radius: 12px; }
 
 .incomeContainer {
@@ -179,6 +181,106 @@ h2 {
     -webkit-transform: scale(1);
     transform: scale(1);
     z-index: 97; } }
+
+@media (max-width: 730px) {
+  .billContainer {
+    min-height: 500px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 20px 10px 0px 10px; }
+    .billContainer .billOver {
+      -webkit-animation: billOverAnim 0.4s;
+      animation: billOverAnim 0.4s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both; }
+    .billContainer .billOut {
+      -webkit-animation: billOutAnim 0.4s;
+      animation: billOutAnim 0.4s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both; }
+    .billContainer .bills {
+      height: 50px;
+      font-size: 16px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-left: 20px;
+      border-radius: 12px; }
+      .billContainer .bills .billDate {
+        font-size: 85%;
+        letter-spacing: 0;
+        font-weight: bold;
+        font-family: "Arial Narrow Bold", sans-serif;
+        color: #212f45;
+        padding: 3px 4px 3px;
+        border-radius: 40px;
+        background-color: #f0f0fa;
+        -webkit-box-shadow: 3px 3px 10px #161f2e;
+        box-shadow: 3px 3px 10px #161f2e; }
+      .billContainer .bills .checkedBillDate {
+        background-color: #75c089; }
+      .billContainer .bills:hover {
+        cursor: pointer; }
+  @-webkit-keyframes billOverAnim {
+    from {
+      background-color: #212f45;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      z-index: 97; }
+    to {
+      background-color: #2d415f;
+      -webkit-transform: scale(1.005);
+      transform: scale(1.005);
+      -webkit-box-shadow: 3px 3px 10px #161f2e;
+      box-shadow: 3px 3px 10px #161f2e;
+      z-index: 98; } }
+  @keyframes billOverAnim {
+    from {
+      background-color: #212f45;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      z-index: 97; }
+    to {
+      background-color: #2d415f;
+      -webkit-transform: scale(1.005);
+      transform: scale(1.005);
+      -webkit-box-shadow: 3px 3px 10px #161f2e;
+      box-shadow: 3px 3px 10px #161f2e;
+      z-index: 98; } }
+  @-webkit-keyframes billOutAnim {
+    from {
+      background-color: #2d415f;
+      -webkit-transform: scale(1.005);
+      transform: scale(1.005);
+      z-index: 98; }
+    to {
+      background-color: #212f45;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      z-index: 97; } }
+  @keyframes billOutAnim {
+    from {
+      background-color: #2d415f;
+      -webkit-transform: scale(1.005);
+      transform: scale(1.005);
+      z-index: 98; }
+    to {
+      background-color: #212f45;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      z-index: 97; } } }
 
 .footer {
   z-index: 99;
