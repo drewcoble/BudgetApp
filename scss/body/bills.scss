@@ -83,6 +83,12 @@
     justify-content: space-between;
     padding: 20px 10px 0px 10px;
 
+    h2 {
+      position: sticky;
+      top: 5px;
+      z-index: 99;
+    }
+
     .billOver {
       animation: billOverAnim 0.4s;
       animation-fill-mode: both;
@@ -94,7 +100,7 @@
 
     .bills {
       height: 50px;
-      font-size: 16px;
+      font-size: 18px;
       display: flex;
       align-items: center;
       padding-left: 20px;

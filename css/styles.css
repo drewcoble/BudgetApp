@@ -94,7 +94,7 @@ h2 {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 20px 10px 0px 10px;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px; }
     .incomeContainer .incomeLine {
       height: 50px;
@@ -235,6 +235,11 @@ h2 {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 20px 10px 0px 10px; }
+    .billContainer h2 {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 5px;
+      z-index: 99; }
     .billContainer .billOver {
       -webkit-animation: billOverAnim 0.4s;
       animation: billOverAnim 0.4s;
@@ -247,7 +252,7 @@ h2 {
       animation-fill-mode: both; }
     .billContainer .bills {
       height: 50px;
-      font-size: 16px;
+      font-size: 18px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -361,6 +366,6 @@ h2 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 16px; }
+    font-size: 18px; }
     .footer .footerStuff {
       color: #212f45; } }
